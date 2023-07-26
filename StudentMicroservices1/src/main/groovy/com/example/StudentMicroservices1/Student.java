@@ -20,7 +20,6 @@ public class Student {
     private String Branch;
 
     @NotNull
-//    @Column(name = "address")
     private String Address;
     @NotNull
     private double Marks;
