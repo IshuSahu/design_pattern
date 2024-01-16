@@ -1,20 +1,18 @@
 class Main{
-    public static void main(String args[])
-    {
-        // Instantiating Singleton class with variable x
-        Singleton x = Singleton.getInstance();
-        Singleton y = Singleton.getInstance();
+    public static void main(String[] args) {
+        Singleton firstInstance = Singleton.getInstance();
 
-        // Condition check
-        if (x == y ) {
-            System.out.println(
-                    "Three objects point to the same memory location on the heap.");
-        }
+        System.out.println("First Instance: " + firstInstance.s);
 
-        else {
-            // Print statement
-            System.out.println(
-                    "Three objects DO NOT point to the same memory location on the heap");
+        Singleton secondInstance = Singleton.getInstance();
+
+        System.out.println("Second Instance: " + secondInstance.s);
+
+        // Both references should point to the same instance
+        if (firstInstance == secondInstance) {
+            System.out.println("Both references point to the same instance.");
+        } else {
+            System.out.println("References do not point to the same instance.");
         }
     }
 }

@@ -22,7 +22,7 @@ public class DbFunction {
         }
         return conn;
     }
-    public void Create_table (Connection conn, String tableName){
+    public void Create_table(Connection conn, String tableName){
         Statement statement;
         try{
             String query = "create table "+ tableName + " (empid SERIAL, empname varchar(20), empaddress varchar(30), primary key(empid))";
